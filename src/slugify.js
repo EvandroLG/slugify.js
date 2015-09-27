@@ -13,11 +13,11 @@
   var removeAccents = function(str) {
     var splited = str.split('');
     var output  = [];
-    var accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž~"\'~^';
-    var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz    ";
+    var accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž~"\'~^!?.:@#$%&*';
+    var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz-----";
 
     splited.forEach(function(value, index) {
-      var hasAccent = accents.indexOf(value) != -1
+      var hasAccent = accents.indexOf(value) != -1;
       output[index] = hasAccent ? accentsOut.substr(accents.indexOf(value), 1) : value;
     });
 
@@ -43,8 +43,7 @@
   };
 
   global.slugify = function(value) {
-    Slugify.createSlug(value);
-    return this;
+    return Slugify.createSlug(value);
   };
 
   global.slugify.bind = function(titleField, slugField) {
