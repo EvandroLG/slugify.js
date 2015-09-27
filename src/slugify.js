@@ -33,13 +33,13 @@
       titleField.addEventListener('keyup', onKeyDown.bind(this), false);
     },
 
-    update: function(slugField, titleField) {
+    update: function(titleField, slugField) {
       slugField.value = this.createSlug(titleField.value);
     },
 
     createSlug: function(value) {
       return removeAccents(value.replace(/\s+/g, '-').toLowerCase());
-    },
+    }
   };
 
   global.slugify = function(value) {
