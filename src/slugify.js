@@ -33,7 +33,7 @@
       titleField.addEventListener('keyup', onKeyDown.bind(this), false);
     },
 
-    update: function() {
+    update: function(slugField, titleField) {
       slugField.value = this.createSlug(titleField.value);
     },
 

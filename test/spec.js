@@ -1,4 +1,7 @@
 describe('slugify', function() {
+  var getById = function(value) {
+    return document.getElementById(value);
+  };
 
   var slugify = window.slugify;
 
@@ -35,10 +38,22 @@ describe('slugify', function() {
     });
 
     describe('bind', function() {
+      var fireKeyup = function(element) {
+        var e = document.createEvent('Events'); 
+        e.initEvent('keyup', true, true);
+        element.dispatchEvent(e);
+      };
+
       it('should update input slug after title was changed', function() {
-                
+        var title = document.getElementById('title');
+        var slug = document.getElementById('slug'); 
+        slugify.bind(title, slug); 
+        
+        title.value = 'This is a test';
+        fireKeyup(title);
+        
+        expect(slug.value).to.equal('this-is-a-test');
       });
     });
   });
-
 });
