@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example - Slagify</title>
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <label for="input_text">Text:</label>
+      <input type="text" id="input_text">
+      <label for="input_slag">Slug:</label>
+      <input type="text" id="input_slug">
+    </form>
+    <script src="../src/slugify.js"></script>
+    <script>
+      var onReady = function() {
+        slugify.bind(document.getElementById('input_text'), document.getElementById('input_slug'));
+      };
+
+      document.addEventListener('DOMContentLoaded', onReady, false);
+    </script>
+  </body>
+</html>
