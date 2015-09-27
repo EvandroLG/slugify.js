@@ -1,3 +1,11 @@
+/*
+  * slugify.js
+  * http://github.com/evandrolg/slugify-js
+  * author: Evandro Leopoldino Goncalves <evandrolgoncalves@gmail.com>
+  * http://github.com/evandrolg
+  * License: MIT
+*/
+
 (function(global) {
 
   'use strict';
@@ -16,32 +24,31 @@
     return output.join('');
   };
 
-  var Slugify = function(params) {
-    this.titleField = params.titleField;
-    this.slugField = params.slugField;
-  };
-
-  Slugify.prototype = {
-    bind: function() {
+  var Slugify = {
+    bind: function(titleField, slugField) {
       var onKeyDown = function(e) {
-        this.update();
+        this.update(titleField, slugField);
       };
 
-      this.titleField.addEventListener('keyup', onKeyDown.bind(this), false);
-    },
-
-    createSlug: function() {
-      return removeAccents(this.titleField.value.replace(/\s+/g, '-').toLowerCase());
+      titleField.addEventListener('keyup', onKeyDown.bind(this), false);
     },
 
     update: function() {
-      this.slugField.value = this.createSlug();
-    }
+      slugField.value = this.createSlug(titleField.value);
+    },
+
+    createSlug: function(value) {
+      return removeAccents(value.replace(/\s+/g, '-').toLowerCase());
+    },
   };
 
-  global.slugify = function(params) {
-    var s = new Slugify(params);
-    s.bind();
+  global.slugify = function(value) {
+    Slugify.createSlug(value);
+    return this;
+  };
+
+  global.slugify.bind = function(titleField, slugField) {
+    Slugify.bind(titleField, slugField);
   };
 
 }(window));
