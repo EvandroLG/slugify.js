@@ -14,7 +14,7 @@ test_js:
 	$(MOCHA_PHANTOM) test/SpecRunner.html
 
 minify:
-	$(UGLIFY) src/selecting.js --mangle --output src/selecting.min.js
+	$(UGLIFY) src/slugify.js --mangle --output dist/slugify.min.js
 	echo "minified!"
 
 deploy: jshint test_js minify

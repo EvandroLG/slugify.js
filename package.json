@@ -1,12 +1,15 @@
 {
   "name": "slugify",
   "author": "EvandroLG",
-  "version": "0.0.8",
+  "version": "1.0.0",
+  "main": "src/slugify.js",
+  "keywords": ["slug", "front-end"],
   "devDependencies": {
     "chai": "^3.3.0",
     "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "mocha-phantomjs": "^4.0.1",
     "uglify-js": "^2.4.24"
-  }
+  },
+  "Licence": "MIT"
 }
