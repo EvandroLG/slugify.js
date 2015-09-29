@@ -1,0 +1,22 @@
+{
+  "name": "slugify",
+  "version": "0.0.1",
+  "homepage": "https://github.com/EvandroLG/slugify.js",
+  "authors": [
+    "evandrolg"
+  ],
+  "description": "A client-side solution to convert text to slug",
+  "main": "src/slugify.js",
+  "moduleType": [],
+  "keywords": [
+    "slug"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
