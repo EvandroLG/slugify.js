@@ -1,5 +1,7 @@
 # slugify.js
 A client-side solution to convert text to slug
+[![Build
+Status](https://travis-ci.org/EvandroLG/slugify.js.svg?branch=master)](https://travis-ci.org/EvandroLG/slugify.js)
 
 ## Install
 To install slugify.js, run:
