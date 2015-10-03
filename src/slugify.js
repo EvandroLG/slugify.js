@@ -6,7 +6,17 @@
   * License: MIT
 */
 
-(function(global) {
+(function(global, factory) {
+
+  if (typeof exports === 'object' && exports) {
+    factory(exports); // CommonJS
+  } else if (typeof define === 'function' && define.amd) {
+    define(['exports'], factory); // AMD
+  } else {
+    factory(global); // <script>
+  }
+
+} (window, function(global) {
 
   'use strict';
 
@@ -50,4 +60,4 @@
     Slugify.bind(titleField, slugField);
   };
 
-}(window));
+}));
