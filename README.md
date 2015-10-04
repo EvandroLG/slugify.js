@@ -2,13 +2,29 @@
 [![Build
 Status](https://travis-ci.org/EvandroLG/slugify.js.svg?branch=master)](https://travis-ci.org/EvandroLG/slugify.js)
 
-A client-side solution to convert text to slug
+A client-side and server-side solution to convert text to slug
+
+## Supported Browsers
+* Google Chrome
+* Firefox
+* IE 6.0+
+* Safari
+* Opera
+* iOS
+* Android
 
 ## Install
 To install slugify.js, run:
 ```sh
 $ npm install slugify-js
 ```
+
+Or bower too:
+```sh
+$ bower install slugify-js
+```
+
+If you're not using a package management, just [download a ZIP](https://github.com/evandrolg/slugify.js/archive/master.zip) file.
 
 ## API
 * slugify(<code>String</code>)
