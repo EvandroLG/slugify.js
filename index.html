@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>slugify.js</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="container">
+      <h1>slugify.js</h1>
+
+      <p class="lead">
+        Enter the desired text in the text field below:
+      </p>
+    </header>
+
+    <main class="container">
+      <div class="input-group">
+        <span class="input-group-addon">Text</span>
+        <input type="text" class="form-control" id="input-text">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">https://example.com/</span>
+        <input type="text" class="form-control" id="input-slug">
+      </div>
+    </main>
+
+    <script src="dist/slugify.min.js"></script>
+    <script>
+      var onReady = function() {
+        slugify.bind(document.getElementById('input-text'), document.getElementById('input-slug'));
+      };
+
+      document.addEventListener('DOMContentLoaded', onReady, false);
+    </script>
+  </body>
+</html>
