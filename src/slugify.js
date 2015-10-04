@@ -16,9 +16,11 @@
     factory(global); // <script>
   }
 
-} (window, function(global) {
+} (this, function(global) {
 
   'use strict';
+
+  var isBrowser = typeof window === 'object' && window.document;
 
   var removeAccents = function(str) {
     var splited = str.split('');
@@ -56,8 +58,10 @@
     return Slugify.createSlug(value);
   };
 
-  global.slugify.bind = function(titleField, slugField) {
-    Slugify.bind(titleField, slugField);
-  };
+  if (isBrowser) {
+    global.slugify.bind = function(titleField, slugField) {
+      Slugify.bind(titleField, slugField);
+    };
+  }
 
 }));
