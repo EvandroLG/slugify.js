@@ -1,5 +1,4 @@
-# slugify.js
-[![Build
+# slugify.js [![Build
 Status](https://travis-ci.org/EvandroLG/slugify.js.svg?branch=master)](https://travis-ci.org/EvandroLG/slugify.js)
 
 A client-side and server-side solution to convert text to slug ([check it out](http://evandrolg.github.io/slugify.js/))
