@@ -2,7 +2,7 @@
 [![Build
 Status](https://travis-ci.org/EvandroLG/slugify.js.svg?branch=master)](https://travis-ci.org/EvandroLG/slugify.js)
 
-A client-side and server-side solution to convert text to slug ([http://evandrolg.github.io/slugify.js/](check it out))
+A client-side and server-side solution to convert text to slug ([check it out](http://evandrolg.github.io/slugify.js/))
 
 ## Supported Browsers
 * IE 6.0+
@@ -22,7 +22,7 @@ If you're not using a package management, just [download a ZIP](https://github.c
 
 ## API
 * slugify(<code>String</code>)
-* slugify.bind(<code>text:HTMLElement</code>, <code>slug:HTMLElement</code>) ([http://evandrolg.github.io/slugify.js/](check it out))
+* slugify.bind(<code>text:HTMLElement</code>, <code>slug:HTMLElement</code>) ([check it out](http://evandrolg.github.io/slugify.js/))
 
 ## Licence
 The MIT License (MIT)
