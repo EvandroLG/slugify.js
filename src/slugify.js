@@ -8,6 +8,8 @@
 
 (function(global, factory) {
 
+  /*global define: false*/
+  /*global exports: true*/
   if (typeof exports === 'object' && exports) {
     factory(exports); // CommonJS
   } else if (typeof define === 'function' && define.amd) {
