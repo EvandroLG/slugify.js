@@ -2,7 +2,7 @@
   "name": "slugify-js",
   "author": "evandrolg",
   "repository": "evandrolg/slugify.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/slugify.js",
   "keywords": ["slug", "front-end"],
   "devDependencies": {
