@@ -1,8 +1,4 @@
 describe('slugify', function() {
-  var getById = function(value) {
-    return document.getElementById(value);
-  };
-
   var slugify = window.slugify;
 
   describe('instance', function() {
